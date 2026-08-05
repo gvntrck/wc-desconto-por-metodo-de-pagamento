@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WC Ajuste Pagamento - desconto por metodo de pagamento
  * Description: Permite configurar acrescimo ou desconto por metodo de pagamento em cada produto no WooCommerce.
- * Version:     1.0.2
+ * Version:     1.0.3
  * Author:      Giovani Tureck
  * Text Domain: wc-metodo-pagamento-acrescimo
  * Requires at least: 6.0
@@ -34,7 +34,7 @@ $myUpdateChecker->setAuthentication('your-token-here');
 if (!class_exists('WC_Metodo_Pagamento_Acrescimo')) {
 	final class WC_Metodo_Pagamento_Acrescimo
 	{
-		const VERSION = '1.0.2';
+		const VERSION = '1.0.3';
 		const META_KEY = '_wc_payment_method_surcharges';
 		const NONCE_ACTION = 'wc_payment_method_surcharges_save';
 		const NONCE_NAME = 'wc_payment_method_surcharges_nonce';
