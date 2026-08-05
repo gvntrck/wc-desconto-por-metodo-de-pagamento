@@ -8,7 +8,7 @@ Plugin para WordPress + WooCommerce que permite configurar um percentual de acre
 2. Edite um produto no WooCommerce.
 3. Abra a aba `Ajuste por pagamento`.
 4. Preencha o percentual desejado para cada gateway.
-5. Use valor positivo para acrescimo e negativo para desconto.
+5. Use valor positivo para acrescimo e negativo para desconto. Informe somente o numero, sem o simbolo `%`, usando ponto ou virgula nos decimais (por exemplo, `3,97` ou `3.97`).
 6. No checkout, quando o cliente escolher o metodo de pagamento, o WooCommerce adiciona o ajuste automaticamente ao total e identifica se e desconto ou acrescimo.
 
 ## Observacoes

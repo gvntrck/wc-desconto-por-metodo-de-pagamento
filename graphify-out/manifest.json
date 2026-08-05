@@ -1,0 +1,232 @@
+{
+  "assets/js/checkout-update.js": {
+    "mtime": 1785959430.2819126,
+    "ast_hash": "ea85f2d1104908280ecc6e06eef8d94f",
+    "semantic_hash": "ea85f2d1104908280ecc6e06eef8d94f"
+  },
+  "plugin-update-checker/Puc/v5/PucFactory.php": {
+    "mtime": 1785959430.3089192,
+    "ast_hash": "45c207cb399c16b15b9db102a7459914",
+    "semantic_hash": "45c207cb399c16b15b9db102a7459914"
+  },
+  "plugin-update-checker/Puc/v5p6/Autoloader.php": {
+    "mtime": 1785959430.323817,
+    "ast_hash": "5e54fc9e7e426029c0d34e8e847c8774",
+    "semantic_hash": "5e54fc9e7e426029c0d34e8e847c8774"
+  },
+  "plugin-update-checker/Puc/v5p6/DebugBar/Extension.php": {
+    "mtime": 1785959430.3452406,
+    "ast_hash": "9adc88b3a0925a93fc307e669ac43fb3",
+    "semantic_hash": "9adc88b3a0925a93fc307e669ac43fb3"
+  },
+  "plugin-update-checker/Puc/v5p6/DebugBar/Panel.php": {
+    "mtime": 1785959430.359061,
+    "ast_hash": "66860396c0aacdc3a3460617a4aa9715",
+    "semantic_hash": "66860396c0aacdc3a3460617a4aa9715"
+  },
+  "plugin-update-checker/Puc/v5p6/DebugBar/PluginExtension.php": {
+    "mtime": 1785959430.369415,
+    "ast_hash": "1d6ab6fb525401471fa6fb1213aa0380",
+    "semantic_hash": "1d6ab6fb525401471fa6fb1213aa0380"
+  },
+  "plugin-update-checker/Puc/v5p6/DebugBar/PluginPanel.php": {
+    "mtime": 1785959430.3799276,
+    "ast_hash": "8839d89fad6d50af203b5ab44c9f9f11",
+    "semantic_hash": "8839d89fad6d50af203b5ab44c9f9f11"
+  },
+  "plugin-update-checker/Puc/v5p6/DebugBar/ThemePanel.php": {
+    "mtime": 1785959430.3898854,
+    "ast_hash": "8c9104bd913eaa3aa1b3a7e9db486797",
+    "semantic_hash": "8c9104bd913eaa3aa1b3a7e9db486797"
+  },
+  "plugin-update-checker/Puc/v5p6/InstalledPackage.php": {
+    "mtime": 1785959430.3999186,
+    "ast_hash": "1bcde7d493472e54cf592c2bb4ce3fa5",
+    "semantic_hash": "1bcde7d493472e54cf592c2bb4ce3fa5"
+  },
+  "plugin-update-checker/Puc/v5p6/Metadata.php": {
+    "mtime": 1785959430.411033,
+    "ast_hash": "b509804676453803896560aa3f835f00",
+    "semantic_hash": "b509804676453803896560aa3f835f00"
+  },
+  "plugin-update-checker/Puc/v5p6/OAuthSignature.php": {
+    "mtime": 1785959430.4210386,
+    "ast_hash": "8da7051a9c80c44527db35e209d4da70",
+    "semantic_hash": "8da7051a9c80c44527db35e209d4da70"
+  },
+  "plugin-update-checker/Puc/v5p6/Plugin/Package.php": {
+    "mtime": 1785959430.447809,
+    "ast_hash": "5dc007fd1005e97c4fdc081d74b3337f",
+    "semantic_hash": "5dc007fd1005e97c4fdc081d74b3337f"
+  },
+  "plugin-update-checker/Puc/v5p6/Plugin/PluginInfo.php": {
+    "mtime": 1785959430.4633791,
+    "ast_hash": "bfd0fc936a9475dcaa11dcdb2b4dcec9",
+    "semantic_hash": "bfd0fc936a9475dcaa11dcdb2b4dcec9"
+  },
+  "plugin-update-checker/Puc/v5p6/Plugin/Ui.php": {
+    "mtime": 1785959430.4780965,
+    "ast_hash": "cd8c447f77ae84ab28d5c597f90d39c2",
+    "semantic_hash": "cd8c447f77ae84ab28d5c597f90d39c2"
+  },
+  "plugin-update-checker/Puc/v5p6/Plugin/Update.php": {
+    "mtime": 1785959430.4906027,
+    "ast_hash": "76988f5436d477323c7cef8f5d6bf955",
+    "semantic_hash": "76988f5436d477323c7cef8f5d6bf955"
+  },
+  "plugin-update-checker/Puc/v5p6/Plugin/UpdateChecker.php": {
+    "mtime": 1785959430.501136,
+    "ast_hash": "8e2869677e8f859fa6bc6356fbfad45d",
+    "semantic_hash": "8e2869677e8f859fa6bc6356fbfad45d"
+  },
+  "plugin-update-checker/Puc/v5p6/PucFactory.php": {
+    "mtime": 1785959430.5093887,
+    "ast_hash": "4426f45abdfe60ae2aa15b3eee114cbb",
+    "semantic_hash": "4426f45abdfe60ae2aa15b3eee114cbb"
+  },
+  "plugin-update-checker/Puc/v5p6/Scheduler.php": {
+    "mtime": 1785959430.519417,
+    "ast_hash": "46e7625b89c84ac92f40d9a2836591b0",
+    "semantic_hash": "46e7625b89c84ac92f40d9a2836591b0"
+  },
+  "plugin-update-checker/Puc/v5p6/StateStore.php": {
+    "mtime": 1785959430.5284894,
+    "ast_hash": "fd7000f88fca2899d5fc24274f33bf72",
+    "semantic_hash": "fd7000f88fca2899d5fc24274f33bf72"
+  },
+  "plugin-update-checker/Puc/v5p6/Theme/Package.php": {
+    "mtime": 1785959430.547798,
+    "ast_hash": "801028dd0a678c33ee22c127cc0e188d",
+    "semantic_hash": "801028dd0a678c33ee22c127cc0e188d"
+  },
+  "plugin-update-checker/Puc/v5p6/Theme/Update.php": {
+    "mtime": 1785959430.5626535,
+    "ast_hash": "bda7daaa6207b96e05a46b08965c4d57",
+    "semantic_hash": "bda7daaa6207b96e05a46b08965c4d57"
+  },
+  "plugin-update-checker/Puc/v5p6/Theme/UpdateChecker.php": {
+    "mtime": 1785959430.5745385,
+    "ast_hash": "150773424bd849e7eebdfb1fd1874a69",
+    "semantic_hash": "150773424bd849e7eebdfb1fd1874a69"
+  },
+  "plugin-update-checker/Puc/v5p6/Update.php": {
+    "mtime": 1785959430.5840316,
+    "ast_hash": "ffc262802dc83d98fd139621d82706a4",
+    "semantic_hash": "ffc262802dc83d98fd139621d82706a4"
+  },
+  "plugin-update-checker/Puc/v5p6/UpdateChecker.php": {
+    "mtime": 1785959430.595737,
+    "ast_hash": "5b8ad3b2c31306e8b67a44846d4d4d5c",
+    "semantic_hash": "5b8ad3b2c31306e8b67a44846d4d4d5c"
+  },
+  "plugin-update-checker/Puc/v5p6/UpgraderStatus.php": {
+    "mtime": 1785959430.6065829,
+    "ast_hash": "350a83d16200ebf3efd4ba56d4fb5dc8",
+    "semantic_hash": "350a83d16200ebf3efd4ba56d4fb5dc8"
+  },
+  "plugin-update-checker/Puc/v5p6/Utils.php": {
+    "mtime": 1785959430.615136,
+    "ast_hash": "0f7c1bb945b509c0c74d169f7cc7018b",
+    "semantic_hash": "0f7c1bb945b509c0c74d169f7cc7018b"
+  },
+  "plugin-update-checker/Puc/v5p6/Vcs/Api.php": {
+    "mtime": 1785959430.6351233,
+    "ast_hash": "8d5e452334b907aeb0805521f30deed2",
+    "semantic_hash": "8d5e452334b907aeb0805521f30deed2"
+  },
+  "plugin-update-checker/Puc/v5p6/Vcs/BaseChecker.php": {
+    "mtime": 1785959430.647373,
+    "ast_hash": "9a3a571b0de4b817f49555f34ce9a2c1",
+    "semantic_hash": "9a3a571b0de4b817f49555f34ce9a2c1"
+  },
+  "plugin-update-checker/Puc/v5p6/Vcs/BitBucketApi.php": {
+    "mtime": 1785959430.6583843,
+    "ast_hash": "b42153a404d6049e637b0a087a50896b",
+    "semantic_hash": "b42153a404d6049e637b0a087a50896b"
+  },
+  "plugin-update-checker/Puc/v5p6/Vcs/GitHubApi.php": {
+    "mtime": 1785959430.6694138,
+    "ast_hash": "9fc84d4b9b6ddb1fbb63a4f66cbf0c0b",
+    "semantic_hash": "9fc84d4b9b6ddb1fbb63a4f66cbf0c0b"
+  },
+  "plugin-update-checker/Puc/v5p6/Vcs/GitLabApi.php": {
+    "mtime": 1785959430.6808164,
+    "ast_hash": "8df602bc518f19a5321d131fba02e516",
+    "semantic_hash": "8df602bc518f19a5321d131fba02e516"
+  },
+  "plugin-update-checker/Puc/v5p6/Vcs/PluginUpdateChecker.php": {
+    "mtime": 1785959430.69026,
+    "ast_hash": "c246d7d8fe15f884b333bb7d2678886d",
+    "semantic_hash": "c246d7d8fe15f884b333bb7d2678886d"
+  },
+  "plugin-update-checker/Puc/v5p6/Vcs/Reference.php": {
+    "mtime": 1785959430.700486,
+    "ast_hash": "a5b62d20ca5e7d8888f7351fe42c1416",
+    "semantic_hash": "a5b62d20ca5e7d8888f7351fe42c1416"
+  },
+  "plugin-update-checker/Puc/v5p6/Vcs/ReleaseAssetSupport.php": {
+    "mtime": 1785959430.7118816,
+    "ast_hash": "e4223007c6af1a0e87ba771424c8e560",
+    "semantic_hash": "e4223007c6af1a0e87ba771424c8e560"
+  },
+  "plugin-update-checker/Puc/v5p6/Vcs/ReleaseFilteringFeature.php": {
+    "mtime": 1785959430.72287,
+    "ast_hash": "37baeef8a55e182f80ab377ce24c97aa",
+    "semantic_hash": "37baeef8a55e182f80ab377ce24c97aa"
+  },
+  "plugin-update-checker/Puc/v5p6/Vcs/ThemeUpdateChecker.php": {
+    "mtime": 1785959430.7329843,
+    "ast_hash": "398476fb976116b2ce895b3e8a26ff72",
+    "semantic_hash": "398476fb976116b2ce895b3e8a26ff72"
+  },
+  "plugin-update-checker/Puc/v5p6/Vcs/VcsCheckerMethods.php": {
+    "mtime": 1785959430.742607,
+    "ast_hash": "3461c657a16c76d59f6fbef58eea81ee",
+    "semantic_hash": "3461c657a16c76d59f6fbef58eea81ee"
+  },
+  "plugin-update-checker/Puc/v5p6/WpCliCheckTrigger.php": {
+    "mtime": 1785959430.7506962,
+    "ast_hash": "09a7dfd75d35b986f67023a8e311b13c",
+    "semantic_hash": "09a7dfd75d35b986f67023a8e311b13c"
+  },
+  "plugin-update-checker/composer.json": {
+    "mtime": 1785959430.762923,
+    "ast_hash": "2e85ba27d0c1f49cadb9acb9f6227ce0",
+    "semantic_hash": "2e85ba27d0c1f49cadb9acb9f6227ce0"
+  },
+  "plugin-update-checker/js/debug-bar.js": {
+    "mtime": 1785959430.7942984,
+    "ast_hash": "5d587e0cf1e450682779d72e4d3a19ef",
+    "semantic_hash": "5d587e0cf1e450682779d72e4d3a19ef"
+  },
+  "plugin-update-checker/load-v5p6.php": {
+    "mtime": 1785959431.3783743,
+    "ast_hash": "0bb792a496abcdd19a1a105baf622326",
+    "semantic_hash": "0bb792a496abcdd19a1a105baf622326"
+  },
+  "plugin-update-checker/plugin-update-checker.php": {
+    "mtime": 1785959431.3838928,
+    "ast_hash": "8d5da03f7dddf1265f1ba186dcff4db8",
+    "semantic_hash": "8d5da03f7dddf1265f1ba186dcff4db8"
+  },
+  "plugin-update-checker/vendor/Parsedown.php": {
+    "mtime": 1785959431.3948967,
+    "ast_hash": "91a6814620038716d16bbdf2b6e2421b",
+    "semantic_hash": "91a6814620038716d16bbdf2b6e2421b"
+  },
+  "plugin-update-checker/vendor/ParsedownModern.php": {
+    "mtime": 1785959431.4053314,
+    "ast_hash": "ab52ebf87f3b135e2c12a3fd94ff908f",
+    "semantic_hash": "ab52ebf87f3b135e2c12a3fd94ff908f"
+  },
+  "plugin-update-checker/vendor/PucReadmeParser.php": {
+    "mtime": 1785959431.4135582,
+    "ast_hash": "adaf92dd185a993d56bfc054e6da85fc",
+    "semantic_hash": "adaf92dd185a993d56bfc054e6da85fc"
+  },
+  "wc-ajuste-pagamento.php": {
+    "mtime": 1785959738.3342223,
+    "ast_hash": "35e743dbcabf48612930541cbcb21b7b",
+    "semantic_hash": "35e743dbcabf48612930541cbcb21b7b"
+  }
+}

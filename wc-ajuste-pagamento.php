@@ -133,7 +133,7 @@ if (!class_exists('WC_Metodo_Pagamento_Acrescimo')) {
 					<p class="form-field">
 						<label><?php echo esc_html__('Configuracao', 'wc-metodo-pagamento-acrescimo'); ?></label>
 						<span class="description" style="display:inline-block;max-width:70%;">
-							<?php echo esc_html__('Use valor positivo para acrescimo e negativo para desconto. Deixe em branco ou 0 para nao aplicar ajuste.', 'wc-metodo-pagamento-acrescimo'); ?>
+							<?php echo esc_html__('Use valor positivo para acréscimo e negativo para desconto. Deixe em branco ou 0 para não aplicar ajuste. Informe somente o número, sem o símbolo %. Use ponto ou vírgula nos decimais (ex.: 3,97 ou 3.97).', 'wc-metodo-pagamento-acrescimo'); ?>
 						</span>
 					</p>
 					<?php if (empty($gateways)): ?>
@@ -165,7 +165,13 @@ if (!class_exists('WC_Metodo_Pagamento_Acrescimo')) {
 										</td>
 										<td><?php echo esc_html($status); ?></td>
 										<td>
-											<input type="number" step="0.01" style="max-width: 120px;"
+											<input type="text"
+												inputmode="decimal"
+												pattern="[+-]?[0-9]+([.,][0-9]+)?"
+												placeholder="<?php echo esc_attr__('Ex.: 3,97', 'wc-metodo-pagamento-acrescimo'); ?>"
+												title="<?php echo esc_attr__('Use somente números, com ponto ou vírgula para decimais.', 'wc-metodo-pagamento-acrescimo'); ?>"
+												aria-label="<?php echo esc_attr(sprintf(__('Ajuste em porcentagem para %s', 'wc-metodo-pagamento-acrescimo'), $gateway->get_title())); ?>"
+												style="max-width: 120px;"
 												name="wc_payment_method_surcharges[<?php echo esc_attr($gateway_id); ?>]"
 												value="<?php echo esc_attr($value); ?>" />
 										</td>
@@ -205,7 +211,18 @@ if (!class_exists('WC_Metodo_Pagamento_Acrescimo')) {
 
 			foreach ($raw_surcharges as $gateway_id => $raw_percentage) {
 				$gateway_id = sanitize_key($gateway_id);
-				$percentage = (float) wc_format_decimal($raw_percentage);
+
+				if (!is_scalar($raw_percentage)) {
+					continue;
+				}
+
+				$normalized_percentage = str_replace(',', '.', trim((string) $raw_percentage));
+
+				if ('' === $normalized_percentage || !preg_match('/^[+-]?\d+(?:\.\d+)?$/', $normalized_percentage)) {
+					continue;
+				}
+
+				$percentage = (float) wc_format_decimal($normalized_percentage);
 
 				if (0.0 === $percentage) {
 					continue;
