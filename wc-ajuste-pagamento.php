@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WC Ajuste Pagamento - desconto por metodo de pagamento
  * Description: Permite configurar acrescimo ou desconto por metodo de pagamento em cada produto no WooCommerce.
- * Version:     1.0.3
+ * Version:     1.0.4
  * Author:      Giovani Tureck
  * Text Domain: wc-metodo-pagamento-acrescimo
  * Requires at least: 6.0
@@ -34,7 +34,7 @@ $myUpdateChecker->setAuthentication('your-token-here');
 if (!class_exists('WC_Metodo_Pagamento_Acrescimo')) {
 	final class WC_Metodo_Pagamento_Acrescimo
 	{
-		const VERSION = '1.0.3';
+		const VERSION = '1.0.4';
 		const META_KEY = '_wc_payment_method_surcharges';
 		const NONCE_ACTION = 'wc_payment_method_surcharges_save';
 		const NONCE_NAME = 'wc_payment_method_surcharges_nonce';
@@ -66,7 +66,7 @@ if (!class_exists('WC_Metodo_Pagamento_Acrescimo')) {
 			add_action('woocommerce_product_data_panels', array($this, 'render_product_data_panel'));
 			add_action('woocommerce_admin_process_product_object', array($this, 'save_product_data'));
 			add_action('woocommerce_checkout_update_order_review', array($this, 'capture_checkout_payment_method'));
-			add_action('woocommerce_cart_calculate_fees', array($this, 'apply_payment_method_surcharge'));
+			add_action('woocommerce_cart_calculate_fees', array($this, 'apply_payment_method_surcharge'), 100);
 			add_action('wp_enqueue_scripts', array($this, 'enqueue_checkout_script'));
 		}
 
@@ -301,11 +301,7 @@ if (!class_exists('WC_Metodo_Pagamento_Acrescimo')) {
 					continue;
 				}
 
-				$line_total = isset($cart_item['line_total']) ? (float) $cart_item['line_total'] : 0.0;
-
-				if ($line_total <= 0) {
-					$line_total = (float) $product->get_price() * (int) $cart_item['quantity'];
-				}
+				$line_total = $this->get_cart_item_adjustment_base($cart_item, $payment_method);
 
 				if ($line_total <= 0) {
 					continue;
@@ -337,6 +333,46 @@ if (!class_exists('WC_Metodo_Pagamento_Acrescimo')) {
 			$fee_taxable = (bool) apply_filters('wc_metodo_pagamento_acrescimo_fee_taxable', false, $payment_method, $cart);
 
 			$cart->add_fee($fee_label, $total_surcharge, $fee_taxable);
+		}
+
+		/**
+		 * Returns the effective cart item amount used as the adjustment base.
+		 *
+		 * Supports products whose catalog price is zero and whose effective price
+		 * is supplied by extensions such as Gravity Forms Product Add-Ons.
+		 *
+		 * @param array<string, mixed> $cart_item Cart item data.
+		 * @param string               $payment_method Selected payment gateway id.
+		 * @return float
+		 */
+		private function get_cart_item_adjustment_base($cart_item, $payment_method)
+		{
+			$quantity = isset($cart_item['quantity']) ? max(1, (int) $cart_item['quantity']) : 1;
+			$base_amount = isset($cart_item['line_total']) ? (float) $cart_item['line_total'] : 0.0;
+
+			if ($base_amount <= 0 && !empty($cart_item['data']) && $cart_item['data'] instanceof WC_Product) {
+				$base_amount = (float) $cart_item['data']->get_price('edit') * $quantity;
+			}
+
+			if ($base_amount <= 0 && isset($cart_item['_gform_total']) && is_numeric($cart_item['_gform_total'])) {
+				$base_amount = (float) $cart_item['_gform_total'] * $quantity;
+			}
+
+			/**
+			 * Filters the cart item amount used to calculate the payment adjustment.
+			 *
+			 * @param float                $base_amount Effective line amount.
+			 * @param array<string, mixed> $cart_item Cart item data.
+			 * @param string               $payment_method Selected payment gateway id.
+			 */
+			$base_amount = (float) apply_filters(
+				'wc_metodo_pagamento_cart_item_adjustment_base',
+				$base_amount,
+				$cart_item,
+				$payment_method
+			);
+
+			return max(0.0, $base_amount);
 		}
 
 		/**

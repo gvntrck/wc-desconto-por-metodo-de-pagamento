@@ -16,3 +16,4 @@ Plugin para WordPress + WooCommerce que permite configurar um percentual de acre
 - O ajuste e somado no checkout com o rótulo `Acrescimo` ou `Desconto`, conforme o caso.
 - Se o percentual ficar em branco ou `0`, nenhum valor extra e aplicado.
 - Em variacoes, o plugin usa a configuracao salva no produto pai quando a variacao nao tiver configuracao propria.
+- Produtos com preco base `0` sao compativeis com o Gravity Forms Product Add-Ons: o ajuste usa o preco efetivo calculado no carrinho ou no checkout.
